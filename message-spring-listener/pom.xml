@@ -18,18 +18,18 @@
       <groupId>org.apache.activemq</groupId>
       <artifactId>activemq-all</artifactId>
       <version>5.15.5</version>
-    </dependency><!-- https://mvnrepository.com/artifact/aopalliance/aopalliance -->
-    <dependency>
-        <groupId>aopalliance</groupId>
-        <artifactId>aopalliance</artifactId>
-        <version>1.0</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.springframework/spring-aop -->
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-context-support -->
     <dependency>
         <groupId>org.springframework</groupId>
-        <artifactId>spring-aop</artifactId>
+        <artifactId>spring-context-support</artifactId>
         <version>5.0.9.RELEASE</version>
     </dependency>
-
+    <!-- https://mvnrepository.com/artifact/javax.mail/mail -->
+    <dependency>
+        <groupId>javax.mail</groupId>
+        <artifactId>mail</artifactId>
+        <version>1.4</version>
+    </dependency>
   </dependencies>
 </project>

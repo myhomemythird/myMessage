@@ -9,7 +9,7 @@ import org.springframework.jms.core.MessageCreator;
 
 import org.richardliao.mq.domain.Spittle;
 
-public class AlertServiceImpl {//implements AlertService {
+public class AlertServiceImpl implements AlertService {
     private JmsOperations jmsOperations;
 
     @Autowired

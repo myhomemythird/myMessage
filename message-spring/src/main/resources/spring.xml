@@ -11,12 +11,9 @@
              p:brokerURL="tcp://localhost:61616" />
        <bean id="queue" class="org.apache.activemq.command.ActiveMQQueue"
              c:_="spitter.queue" />
-       <bean id="topic" class="org.apache.activemq.command.ActiveMQTopic"
-             c:_="spitter.topic" />
-       <bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate"
-             c:_-ref="connectionFactory"
-	     p:defaultDestinationName="spitter.queue" />
-       <bean class="org.richardliao.mq.AlertServiceImpl"
-	     c:_-ref="jmsTemplate" />
-
+       <bean id="alertService"
+	     class="org.springframework.jms.remoting.JmsInvokerProxyFactoryBean"
+	     p:connectionFactory-ref="connectionFactory"
+	     p:queueName="spitter.queue"
+	     p:serviceInterface="org.richardliao.mq.AlertService" />
 </beans>
